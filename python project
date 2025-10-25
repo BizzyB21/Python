@@ -1,0 +1,129 @@
+#Variables
+ 
+Student_1 = {
+    "student_id" : '042789',
+    "first_name" :'Greg',
+    "last_name" : 'James',
+    "email" :'gregj@school.com',
+    "major" : 'Computer Science'
+}
+ 
+ 
+Student_2 = {
+    "student_id" :'042367',
+    "first_name" : 'Alicia',
+    "last_name" :'Keys',
+    "email" :'Akeys@school.com',
+    "major" : 'Accounting'
+}
+ 
+ 
+ 
+Student_3 = {
+    "student_id" : '045373',
+    "first_name" : 'Kenneth',
+    "last_name" : 'Jones',
+    "email" : 'KenJones@school.com',
+    "major" : 'Biology'
+}
+ 
+ 
+ 
+student_dict1 = {
+        'student_id': '042789',
+        'first_name': 'Greg',
+        'last_name': 'James',
+        'email': 'gregj@school.com',
+        'major': 'Computer Science'
+    }
+ 
+student_dict2 = {
+        'student_id': '042367',
+        'first_name': 'Alicia',
+        'last_name': 'Keys',
+        'email': 'Akeys@school.com',
+        'major': 'Accounting'
+    }
+ 
+student_dict3 = {
+        'student_id': '045373',
+        'first_name': 'Kenneth',
+        'last_name': 'Jones',
+        'email': 'KenJones@school.com',
+        'major': 'Biology'
+    }
+ 
+student_list = [student_dict1, student_dict2, student_dict3]
+print(student_list)
+ 
+#Courses
+course_id1 = '1001'
+course_name = 'Information Technology'
+credits = 3
+ 
+course_id2 = '1002'
+course_name = 'Business Administration'
+credits = 4
+ 
+course_id3 = '1003'
+course_name = 'Science'
+credits = 2
+ 
+course_list = ['Information Technology', 'Business Administration', 'Science']
+ 
+#Grades
+student_id1 = '042789'
+course_id1 = '1001'
+grade1 = 'A'
+ 
+student_id2 = '042367'
+course_id2 = '1002'
+grade2 = 'A+'
+ 
+student_id3 = '045373'
+course_id3 = '1003'
+grade3 = 'B-'
+ 
+grades_list = ['A', 'A+', 'B-']
+ 
+class Student():
+    def __init__(self, id, first_name, last_name, email, major):
+        self.id = id
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
+        self.major = major
+    def student_information(self):
+        print(f"The student with an id of {self.id}, email of {self.email} and majoring in {self.major} is {self.first_name} {self.last_name}")
+ 
+s4 = Student("043563", "Kelly", "Johansen", "KellyJohanson@school.com", "Architecture")
+s4.student_information()
+print(s4)
+ 
+class Marks():
+    def __init__(self, student_id, course_id, grade):
+        self.student_id = student_id
+        self.course_id = course_id
+        self.grade = grade
+   
+    def display_info(self):
+        print(f"The student with an id of {self.student_id} had an {self.grade} in a course with the id of {self.course_id}")
+s1 = Marks("047883", "1005", "B-")
+s1.display_info()
+print(s1)
+ 
+def percentage(num1, num2):
+    print(str(num1/num2 * 100)+ "%")
+    percentage(89, 100)
+    percentage(95, 100)
+    percentage(76, 100)
+ 
+def gpa(percentage, num3):
+    print(str(percentage/3 / 10 ))
+    gpa(89, 3)
+    gpa(95, 3)
+    gpa(76, 3)
+    if gpa < 2.00:
+        print("Congrats")
+    else:
+        print("You failed")
